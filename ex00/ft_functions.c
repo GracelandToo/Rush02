@@ -1,11 +1,21 @@
 
 #include <unistd.h>
 
-int ft_strlen(char *str);
-
 void ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 unsigned long ft_atoi(char *str)
@@ -25,16 +35,4 @@ unsigned long ft_atoi(char *str)
         x *= 10;
     }
     return (b);
-}
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
 }
